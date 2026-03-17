@@ -492,7 +492,7 @@ flowchart TD
     E --> F{UM User?}
     F -->|Yes| G[Set isUmUser = true]
     F -->|No| H[Set Password]
-    G --> I[Assign RMC & Roles]
+    G --> I[Assign Role]
     H --> I
     I --> J[User Created ✓]
     C -->|Edit| K[Click Edit Icon]
@@ -521,8 +521,7 @@ flowchart TD
    - **Phone** — Contact number (encrypted at rest)
    - **Is UM User** — Toggle ON for UM staff, OFF for external users
    - **Password** — Required for external users (UM users use SSO)
-   - **RMC** — Select the user's Research Management Centre
-   - **Roles** — Select one or more roles
+   - **Role** — Select role for the user
 4. Click **"Create"**
 
 > **Security Note**: IC/Passport numbers and phone numbers are encrypted using AES-256-GCM encryption and are displayed masked (last 4 digits only).
@@ -536,7 +535,7 @@ flowchart TD
 > ![Screenshot Placeholder: Grant Levels Page](images/gl.jpg)
 > *Screenshot: Grant levels list showing 4 levels — University, National, Private, International — with descriptions, status badges, and grant type counts.*
 
-The system supports **4 standard grant levels**:
+The system supports **4 standard grant levels**: [can add more]
 
 | Level | Code | Description |
 |-------|------|-------------|
@@ -680,7 +679,7 @@ flowchart TD
    - **Grant Type** — Select the type within the chosen level
    - **Fund Source** — Select the funding agency
 4. Click **"Create"**
-5. You will be taken to the **Grant Detail Page** with 7 tabs
+5. You will be taken to the **Grant Detail Page** 
 
 ---
 
@@ -975,9 +974,9 @@ The dashboard provides summary cards:
 
 Announcements can be broadcast through:
 - **Email** — Direct email to eligible researchers
-- **Website** — Published on the GMS portal
-- **UMmail** — UM internal mail system
-- **UMportal** — UM intranet
+- **Website** — Published on the GMS portal (when configured)
+- **UMmail** — UM internal mail system 
+- **UMportal** — UM intranet (when configured)
 - **WhatsApp** — Business API (when configured)
 
 ---
@@ -1207,8 +1206,7 @@ flowchart TD
    - Cannot be from the same batch
 4. Select panel members (checkbox)
 5. Set the **Evaluation Deadline**
-6. Optionally enable **Blind Review** (anonymize PI details)
-7. Click **"Assign"**
+6. Click **"Assign"**
 
 #### Comments System
 
