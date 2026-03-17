@@ -1,4 +1,4 @@
-# Universiti Malaya Grant Management System (UM-GMS)
+<img width="949" height="466" alt="image" src="https://github.com/user-attachments/assets/85693779-196c-42fc-8119-b7a2f106807d" /># Universiti Malaya Grant Management System (UM-GMS)
 # Comprehensive User Guide & System Manual
 
 **Version**: 1.0
@@ -169,7 +169,7 @@ flowchart TD
 
 **Step 1 — Select Your Identity**
 
-> ![Screenshot Placeholder: Registration Step 1 — User Type Selection]
+> ![Screenshot Placeholder: Registration Step 1 — User Type Selection](images/registration1.jpg)
 > *Screenshot: Registration page showing the 6 user type cards (UM Researcher, External Researcher, Collaborator, Stakeholder, Community, Consultant/Legal) with descriptions and a "Full Name" input field.*
 
 1. Navigate to the registration page
@@ -185,7 +185,7 @@ flowchart TD
 
 **Step 2 — Enter Your Email**
 
-> ![Screenshot Placeholder: Registration Step 2 — Email Entry]
+> ![Screenshot Placeholder: Registration Step 2 — Email Entry](images/registration2.jpg)
 > *Screenshot: Email entry form with email field, email confirmation field, and validation message for UM Researchers showing "@um.edu.my required".*
 
 1. Enter your **Email Address**
@@ -196,7 +196,7 @@ flowchart TD
 
 **Step 3 — Set Your Password & Profile**
 
-> ![Screenshot Placeholder: Registration Step 3 — Password & Profile]
+> ![Screenshot Placeholder: Registration Step 3 — Password & Profile](images/registration3.jpg)
 > *Screenshot: Password field with strength indicator, phone number field, institution/faculty dropdown, and password requirements checklist.*
 
 1. Create a **Password** meeting these requirements:
@@ -233,7 +233,7 @@ flowchart TD
     style F fill:#E23B30,color:#fff
 ```
 
-> ![Screenshot Placeholder: Login Page]
+> ![Screenshot Placeholder: Login Page](images/login.jpg)
 > *Screenshot: Login page with UM branding (blue header, UM logo), email field, password field with show/hide toggle, "Forgot Password?" link, "Sign In" button, and "Register" link.*
 
 1. Navigate to the login page
@@ -261,7 +261,7 @@ flowchart TD
     style H fill:#28a745,color:#fff
 ```
 
-> ![Screenshot Placeholder: Forgot Password Page]
+> ![Screenshot Placeholder: Forgot Password Page](images/forgot.jpg)
 > *Screenshot: Forgot password page with email input field and "Send Reset Link" button.*
 
 1. On the login page, click **"Forgot Password?"**
@@ -279,7 +279,7 @@ flowchart TD
 
 ### 4.1 Admin Dashboard
 
-> ![Screenshot Placeholder: Admin Dashboard]
+> ![Screenshot Placeholder: Admin Dashboard](images/admin.jpg)
 > *Screenshot: Admin dashboard showing 4 overview cards (Total Calls, Published Calls, Applications, Overdue), Application Pipeline bar chart, Applications Per Call chart, and System Configuration summary.*
 
 The Admin Dashboard provides a bird's-eye view of the system:
@@ -297,7 +297,7 @@ The Admin Dashboard provides a bird's-eye view of the system:
 
 ### 4.2 PI/Researcher Dashboard
 
-> ![Screenshot Placeholder: PI Dashboard]
+> ![Screenshot Placeholder: PI Dashboard](images/pi.jpg)
 > *Screenshot: PI dashboard showing welcome banner with active call count, My Applications stats (Total, Under Review, Approved, Rejected), Recent Applications list, and Open Grant Calls with "Apply Now" buttons.*
 
 The Researcher Dashboard provides a personalized view:
@@ -313,7 +313,7 @@ The Researcher Dashboard provides a personalized view:
 
 ### 4.3 Sidebar Navigation
 
-> ![Screenshot Placeholder: Sidebar Navigation]
+> ![Screenshot Placeholder: Sidebar Navigation](images/sidebar.jpg)
 > *Screenshot: Left sidebar showing collapsible menu sections — Dashboard, Pre-Award Setup (M01), Grant Setup (M02), Announcements (M03), Grant Application (M05), Evaluation (M06), Grant Approval (M07), Grant Account (M08), Reports (M09), Search (M10). Sections visible based on user role.*
 
 The sidebar navigation is **role-aware** — you will only see menu items you have access to. Sections expand when clicked to reveal sub-pages.
