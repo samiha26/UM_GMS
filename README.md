@@ -790,9 +790,9 @@ flowchart TD
 #### Tab 6: Schedules/Phases
 
 > ![Screenshot Placeholder: Schedules/Phases Tab]
-> *Screenshot: Grant schedule configuration with start/end dates, disbursement phases, and vote category allocation per phase. Example: Phase 1 (Jan-Jun 2026) with Vote 11000: RM50,000, Vote 21000: RM30,000.*
+> *Screenshot: Grant schedule configuration with start/end dates, disbursement phases, and vote category allocation per phase.*
 
-**Purpose**: Define the grant disbursement timeline and budget allocation per vote code.
+**Purpose**: Define the grant disbursement timeline and budget allocation per vote code. [CURRENTLY NOT IMPLEMENTED FULLY]
 
 ---
 
@@ -904,7 +904,7 @@ stateDiagram-v2
 
 ### 7.3 Creating a Grant Call
 
-> ![Screenshot Placeholder: Create Grant Call Page]
+> ![Screenshot Placeholder: Create Grant Call Page](images/gc1.jpg)
 > *Screenshot: Full-page form with sections: Grant Selection (dropdown), Call Details (Title, Description, Eligibility), Dates (Open Date, Close Date, Funder Deadline), Financial (Max Funding Amount), Contact (URL, Email), Documents (Required documents list), Reminders (3 reminder date pickers).*
 
 ```mermaid
@@ -937,7 +937,7 @@ flowchart TD
 1. Navigate to **Announcements → Grant Calls**
 2. Click **"Create Call"**
 3. **Select Grant Funding** — Choose the pre-configured grant program from M02
-4. Fill in the **26 call fields**:
+4. Fill in the **call fields**:
    - **Title** — Call title (e.g., "Call for UMRG Applications 2026/27")
    - **Description** — Detailed call description
    - **Eligibility** — Who can apply
@@ -960,7 +960,7 @@ flowchart TD
 
 ### 7.5 Grant Call Dashboard
 
-> ![Screenshot Placeholder: Grant Calls Dashboard]
+> ![Screenshot Placeholder: Grant Calls Dashboard](images/gc2.jpg)
 > *Screenshot: Dashboard cards showing: Total Calls (25), Open Calls (8), Closed Calls (15), Active Milestones (12). Below: list of calls with status badges, application counts, and action buttons.*
 
 The dashboard provides summary cards:
@@ -971,7 +971,7 @@ The dashboard provides summary cards:
 
 ### 7.6 Announcements
 
-> ![Screenshot Placeholder: Announcement Creation]
+> ![Screenshot Placeholder: Announcement Creation](images/gc3.jpg)
 > *Screenshot: Announcement creation form showing: Title, Content (rich text editor), Platforms (checkboxes: Website, UMmail, UMportal, WhatsApp), Recipient Group (All, UM Internal, UM External), Attachments (file upload), Preview panel.*
 
 Announcements can be broadcast through:
@@ -983,110 +983,15 @@ Announcements can be broadcast through:
 
 ---
 
-## 8. Module M04 — Proposal Preparation
+## 8. Module M05 — Grant Application
 
 ### 8.1 Overview
-
-Module M04 allows Principal Investigators (PIs) to prepare research proposals before formal grant application. This module is **optional** — PIs may go directly to M05 (Grant Application) instead.
-
-> **Access**: PI/Researcher (own proposals), Administrator (all proposals)
-> **Note**: This module may be skipped as researchers often go directly to grant applications.
-
-### 8.2 Proposal Lifecycle
-
-```mermaid
-stateDiagram-v2
-    [*] --> Preparing: Create Proposal
-    Preparing --> Draft: Save Draft
-    Draft --> Submitted: Submit
-    Submitted --> Revision: Revision Requested
-    Revision --> Submitted: Resubmit
-    Submitted --> Awarded: Grant Awarded
-    Awarded --> [*]
-```
-
-### 8.3 PI Workflow — My Proposals
-
-> ![Screenshot Placeholder: My Proposals Page]
-> *Screenshot: PI's proposal list showing cards/table with columns: Title, Status (badge), Application Type (Internal/External), Created Date, Last Modified, Actions (Edit, View, Delete, Download PDF). Dashboard cards: Preparing (3), Draft (5), Submitted (2), Revision (1), Awarded (1).*
-
-```mermaid
-flowchart TD
-    A[Navigate to My Proposals] --> B[Click 'Create Proposal']
-    B --> C{Application Type?}
-    C -->|Internal| D[Dynamic Form from M02]
-    C -->|External| E[Upload PDF Only]
-    D --> F[Fill Research Details]
-    E --> G[Upload Proposal PDF]
-    F --> H[Add Team Members]
-    G --> H
-    H --> I[Upload Supporting Documents]
-    I --> J[Save as Draft]
-    J --> K{Ready to Submit?}
-    K -->|No| L[Continue Editing]
-    L --> J
-    K -->|Yes| M[Click 'Submit']
-    M --> N[Proposal Submitted ✓]
-    N --> O[Admin & Team Notified]
-
-    style B fill:#1C29A7,color:#fff
-    style N fill:#28a745,color:#fff
-    style O fill:#B49400,color:#fff
-```
-
-#### How to Create a Proposal
-
-> ![Screenshot Placeholder: Create Proposal — Type Selection]
-> *Screenshot: Dialog showing two cards: "Internal Grant" (with dynamic form icon and description) and "External Grant" (with PDF upload icon and description). Call selection dropdown above.*
-
-1. Navigate to **My Proposals**
-2. Click **"Create Proposal"**
-3. Select the **Application Type**:
-   - **Internal** — Fill out the dynamic application form (configured in M02)
-   - **External** — Upload a PDF proposal document
-4. Select the **Grant Call** (if applicable)
-5. Enter proposal details and save
-
-#### How to Add Team Members
-
-> ![Screenshot Placeholder: Team Members Tab]
-> *Screenshot: Team member table with columns: Name, Faculty/Department, Designation, Email, UMExpert Link, Editing Access (toggle), Actions (Remove). "Add Member" button.*
-
-1. Open your proposal
-2. Navigate to the **Team Members** section
-3. Click **"Add Member"**
-4. Enter: Name, Faculty, Designation, Email, UMExpert Link
-5. Optionally grant **Editing Access** to allow co-editing
-
-#### How to Submit a Proposal
-
-1. Ensure all required fields are filled
-2. Click **"Submit"**
-3. The proposal is locked (read-only)
-4. All team members receive a notification email
-
-### 8.4 Admin View — Master Proposal List
-
-> ![Screenshot Placeholder: Admin Proposals Master List]
-> *Screenshot: Master list table with filters (Status, Search), columns: Title, PI Name, PI Email, Department, Status, Version, Created Date, Actions (View, Change Status, Export). Summary stats cards at top.*
-
-Administrators can:
-- View **all proposals** across all PIs
-- **Change status** (e.g., Request Revision, Award)
-- **Export** proposals to CSV
-- **Download** proposal PDFs
-
----
-
-## 9. Module M05 — Grant Application
-
-### 9.1 Overview
 
 Module M05 is the **core pre-award module** where PIs submit grant applications, admins conduct technical checks, assign panels, and manage the application lifecycle.
 
 > **Access**: PI (own applications), Administrator (all applications), Panel Members (assigned evaluations)
 
-### 9.2 Application Lifecycle
+### 8.2 Application Lifecycle
 
 ```mermaid
 stateDiagram-v2
@@ -1113,9 +1018,9 @@ stateDiagram-v2
     end note
 ```
 
-### 9.3 PI Workflow — My Applications
+### 8.3 PI Workflow — My Applications
 
-> ![Screenshot Placeholder: My Applications Dashboard]
+> ![Screenshot Placeholder: My Applications Dashboard](images/ga1.jpg)
 > *Screenshot: PI's application dashboard with status summary cards (Draft: 3, Submitted: 5, Under Review: 2, Approved: 1, Rejected: 0, Withdrawn: 0). Application list table below with columns: App No, Project Title, Grant, Status, Submitted Date, Actions.*
 
 ```mermaid
@@ -1154,7 +1059,7 @@ flowchart TD
 
 **Step 1 — Start a New Application**
 
-> ![Screenshot Placeholder: New Application — Call Selection]
+> ![Screenshot Placeholder: New Application — Call Selection](images/ga2.jpg)
 > *Screenshot: Dialog showing list of open grant calls with: Call Title, Grant Name, Deadline, Max Funding, "Select" button for each.*
 
 1. Navigate to **Grant Application → My Applications**
@@ -1236,9 +1141,9 @@ flowchart TD
 
 ---
 
-### 9.4 Admin Workflow — Application Management
+### 8.4 Admin Workflow — Application Management
 
-> ![Screenshot Placeholder: Admin Applications Master List]
+> ![Screenshot Placeholder: Admin Applications Master List](images/ga3.jpg)
 > *Screenshot: Admin applications page with dashboard cards (Draft, Submitted, Technical Check, Panel Evaluation, Approved, Rejected, Withdrawn counts). Filter bar (Status, Grant, Search). Table with columns: App No, PI Name, Department, Call, Status, Tech Check Status, Submitted Date, Actions.*
 
 ```mermaid
@@ -1292,7 +1197,7 @@ flowchart TD
 
 #### Panel Assignment
 
-> ![Screenshot Placeholder: Panel Assignment Dialog]
+> ![Screenshot Placeholder: Panel Assignment Dialog](images/ga4.jpg)
 > *Screenshot: Panel assignment modal showing: Search panelists input, available panelists list with checkboxes (Name, Department, Expertise), COI indicator (green check = no conflict, red X = conflict), Evaluation Deadline date picker, Blind Review toggle, "Assign" button.*
 
 1. Click **"Assign Panels"**
@@ -1308,7 +1213,7 @@ flowchart TD
 
 #### Comments System
 
-> ![Screenshot Placeholder: Comments Panel]
+> ![Screenshot Placeholder: Comments Panel](images/ga5.jpg)
 > *Screenshot: Comments section showing threaded comments with type badges (Internal in blue, Feedback in orange, Costing in green), author name, timestamp, and comment text.*
 
 Three types of comments:
@@ -1318,15 +1223,17 @@ Three types of comments:
 
 ---
 
-## 10. Module M06 — Proposal Evaluation
+## [⚠️⚠️⚠️WORK IN PROGRESS HENCE IT IS NOT VISIBLE IN THE TEST LINK⚠️⚠️⚠️]
 
-### 10.1 Overview
+## 9. Module M06 — Evaluation
+
+### 9.1 Overview
 
 Module M06 manages the evaluation process where assigned panel members independently review and score grant applications using configurable evaluation forms.
 
 > **Access**: Panel Members (assigned evaluations), Administrator (all evaluations)
 
-### 10.2 Evaluation Workflow
+### 9.2 Evaluation Workflow
 
 ```mermaid
 flowchart TD
@@ -1359,7 +1266,7 @@ flowchart TD
     style P9 fill:#28a745,color:#fff
 ```
 
-### 10.3 Panel Member Workflow
+### 9.3 Panel Member Workflow
 
 #### Step 1: Sign NDA & Conflict of Interest Declaration
 
@@ -1403,7 +1310,7 @@ flowchart TD
 
 > **Important**: Once submitted, your evaluation is locked. Contact the administrator if changes are needed.
 
-### 10.4 Admin Evaluation Management
+### 9.4 Admin Evaluation Management
 
 > ![Screenshot Placeholder: Admin Evaluation Dashboard]
 > *Screenshot: Evaluation management page showing: Stats cards (Total in Evaluation, All Panels Done, In Progress, No Panels Assigned). Application list with evaluation progress indicators (colored dots: green=completed, blue=in progress, red=declined, grey=pending). Actions: Generate Rankings, Auto Reminders, Export CSV.*
@@ -1454,15 +1361,15 @@ stateDiagram-v2
 
 ---
 
-## 11. Module M07 — Grant Approval
+## 10. Module M07 — Grant Approval
 
-### 11.1 Overview
+### 10.1 Overview
 
 Module M07 manages the multi-level approval process where designated approvers review and approve/reject applications, followed by offer letter generation and PI response management.
 
 > **Access**: Approvers (assigned applications), PI (own offers), Administrator (all approvals)
 
-### 11.2 Approval Lifecycle
+### 10.2 Approval Lifecycle
 
 ```mermaid
 stateDiagram-v2
@@ -1508,7 +1415,7 @@ stateDiagram-v2
     Account_Created --> [*]
 ```
 
-### 11.3 Approver Workflow
+### 10.3 Approver Workflow
 
 > ![Screenshot Placeholder: My Approvals Dashboard]
 > *Screenshot: Approver's dashboard with two tabs: Pending and History. Pending tab shows applications awaiting decision with columns: App No, Project Title, PI, Grant, Level, Working Days Remaining (color-coded: green/yellow/red), Actions (Review). History tab shows past decisions.*
@@ -1559,7 +1466,7 @@ flowchart TD
 
 ---
 
-### 11.4 Admin — Offer Letter Management
+### 10.4 Admin — Offer Letter Management
 
 > ![Screenshot Placeholder: Offer Letter Generation]
 > *Screenshot: Offer letter page showing: Template preview with UM branding, editable fields (Start Date, End Date, Budget Table, Milestones, Terms & Conditions), "Generate" and "Send to PI" buttons.*
@@ -1604,7 +1511,7 @@ flowchart TD
 6. Click **"Send to PI"**
 7. The PI receives an email with a link to view the offer
 
-### 11.5 PI — Responding to Offer
+### 10.5 PI — Responding to Offer
 
 > ![Screenshot Placeholder: PI Offer Response Page]
 > *Screenshot: Offer letter view showing: Full offer letter with budget details, Start/End dates, Terms. Three response buttons: "Accept Offer" (green), "Negotiate" (yellow), "Reject Offer" (red). Comments textarea for negotiate/reject.*
@@ -1618,15 +1525,15 @@ flowchart TD
 
 ---
 
-## 12. Module M08 — Grant Account Creation
+## 11. Module M08 — Grant Account Creation
 
-### 12.1 Overview
+### 11.1 Overview
 
 Module M08 materializes accepted offers into formal grant accounts with project numbers, financial tracking, team management, milestones, and document storage.
 
 > **Access**: Administrator (create/manage), PI (view/upload for own accounts)
 
-### 12.2 Grant Account Lifecycle
+### 11.2 Grant Account Lifecycle
 
 ```mermaid
 stateDiagram-v2
@@ -1647,7 +1554,7 @@ stateDiagram-v2
     Closed --> [*]
 ```
 
-### 12.3 Admin Workflow — Create Grant Account
+### 11.3 Admin Workflow — Create Grant Account
 
 > ![Screenshot Placeholder: Grant Accounts Dashboard]
 > *Screenshot: Grant accounts page showing pending banner ("3 accounts pending from accepted offers"), filter bar (Search, Status, Project Status, Account Type), account list table with columns: Project No, Project Title, PI, Grant, Status, Project Status, Budget, Start Date, End Date, Actions.*
@@ -1700,7 +1607,7 @@ flowchart TD
 
 ---
 
-### 12.4 Admin — Account Detail Page
+### 11.4 Admin — Account Detail Page
 
 > ![Screenshot Placeholder: Account Detail — Overview Tab]
 > *Screenshot: 6-tab detail page. Overview tab showing: Project number, Status badge (Active/Suspended/Closed), Project Status badge (New/Ongoing/Extended/End), PI details, Grant details, Financial summary (Total Allocated, Total Awarded), Start/End dates, Classification flags.*
@@ -1730,7 +1637,7 @@ The account detail page has **6 tabs**:
 
 ---
 
-### 12.5 PI Workflow — My Grant Accounts
+### 11.5 PI Workflow — My Grant Accounts
 
 > ![Screenshot Placeholder: PI Grant Accounts]
 > *Screenshot: PI's grant accounts page showing cards for each account: Project Number, Title, Grant Name, Status badge, Project Status badge, Budget (Total Allocated), Timeline (Start → End), Progress bar. Actions: View, Upload Documents, Request Extension.*
@@ -1768,15 +1675,15 @@ flowchart TD
 
 ---
 
-## 13. Module M09 — Reports & Analytics
+## 12. Module M09 — Reports & Analytics
 
-### 13.1 Overview
+### 12.1 Overview
 
 Module M09 provides a flexible reporting engine that generates reports across all system modules with customizable columns, filters, and export formats.
 
 > **Access**: Administrator and Super Administrator only
 
-### 13.2 Report Generation Flow
+### 12.2 Report Generation Flow
 
 ```mermaid
 flowchart TD
@@ -1809,7 +1716,7 @@ flowchart TD
     style H fill:#28a745,color:#fff
 ```
 
-### 13.3 Report Configuration
+### 12.3 Report Configuration
 
 > ![Screenshot Placeholder: Reports Page]
 > *Screenshot: Reports page showing: Module selector tabs (Setup, Grants, Calls, Proposals, Applications, Evaluations, Approvals, Accounts), Column selection checkboxes, Filter panel (Search, Status dropdown, Date From/To), Sort options, "Generate Report" button, "Save Template" button, Export buttons (CSV, Excel).*
@@ -1830,7 +1737,7 @@ flowchart TD
 8. **Export** — Click CSV or Excel to download
 9. **Save Template** — Save your configuration for future reuse
 
-### 13.4 Available Report Columns by Module
+### 12.4 Available Report Columns by Module
 
 | Module | Available Columns |
 |--------|------------------|
@@ -1843,7 +1750,7 @@ flowchart TD
 | **Approvals (M07)** | App No, Project Title, Approver, Level, Status, Comments, Created/Decided At |
 | **Accounts (M08)** | Project No, Title, PI Name, Email, Grant, Status, Total Awarded, Start/End Date, Created At |
 
-### 13.5 Report Templates
+### 12.5 Report Templates
 
 > ![Screenshot Placeholder: Report Templates]
 > *Screenshot: Saved templates list showing: Template Name, Module, Created Date, Actions (Load, Delete). "Load Template" button fills in all configuration fields.*
@@ -1857,15 +1764,15 @@ Templates save your report configuration for reuse:
 
 ---
 
-## 14. Module M10 — Global Search
+## 13. Module M10 — Global Search
 
-### 14.1 Overview
+### 13.1 Overview
 
 Module M10 provides a unified search interface to find records across all system modules — users, proposals, applications, and grant accounts.
 
 > **Access**: Administrator and Super Administrator only
 
-### 14.2 Search Interface
+### 13.2 Search Interface
 
 > ![Screenshot Placeholder: Global Search Page]
 > *Screenshot: Search page with large search bar at top: "Search by PI name, staff number, project title, application number...". Type filter tabs: All | PI/Researchers | Projects | Applications. Results area showing mixed results grouped by type with icons, titles, subtitles, status badges, and "View" links.*
@@ -1889,7 +1796,7 @@ flowchart TD
     style A fill:#1C29A7,color:#fff
 ```
 
-### 14.3 How to Search
+### 13.3 How to Search
 
 1. Navigate to **Search**
 2. Enter your search term (e.g., PI name, staff number, project title, application number)
@@ -1905,9 +1812,9 @@ flowchart TD
 
 ---
 
-## 15. End-to-End Grant Lifecycle
+## 14. End-to-End Grant Lifecycle
 
-### 15.1 Complete System Flow
+### 14.1 Complete System Flow
 
 ```mermaid
 flowchart TB
@@ -1954,7 +1861,7 @@ flowchart TB
     style D5 fill:#28a745,color:#fff
 ```
 
-### 15.2 Role-Based Journey Maps
+### 14.2 Role-Based Journey Maps
 
 #### Super Administrator Journey
 
@@ -2048,7 +1955,7 @@ journey
 
 ---
 
-### 15.3 Application Status Flow (Complete)
+### 14.3 Application Status Flow (Complete)
 
 ```mermaid
 flowchart LR
@@ -2086,9 +1993,9 @@ flowchart LR
 
 ---
 
-## 16. Notification & Email System
+## 15. Notification & Email System
 
-### 16.1 Email Notification Map
+### 15.1 Email Notification Map
 
 The system sends automated email notifications at key workflow points. All emails use **UM branding** (Royal Blue header, Gold accents, UM logo).
 
@@ -2143,7 +2050,7 @@ flowchart TD
     style N23 fill:#1C29A7,color:#fff
 ```
 
-### 16.2 Email Template Example
+### 15.2 Email Template Example
 
 > ![Screenshot Placeholder: Email Template Example]
 > *Screenshot: Sample UM-branded email showing: Blue header bar with "Universiti Malaya Grant Management System", Gold subtitle "Application Submitted Successfully", body text with application details (App No, Project Title, PI Name, Grant, Submission Date), action button "View Application", footer with UM contact information.*
