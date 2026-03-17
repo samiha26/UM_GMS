@@ -638,7 +638,7 @@ flowchart TD
 
 **Purpose**: Create and fully configure grant funding programs. This is the most complex entity in M02, containing 7 sub-resource tabs.
 
-> ![Screenshot Placeholder: Grant Funding List Page]
+> ![Screenshot Placeholder: Grant Funding List Page](images/gf.jpg)
 > *Screenshot: Grant funding list with columns: Name, Grant Code, Level, Type, Fund Source, Status (Active/Suspended), Applications Count, Actions (View, Edit, Duplicate, Suspend, Delete).*
 
 ```mermaid
@@ -669,7 +669,7 @@ flowchart TD
 
 #### How to Create a Grant Funding
 
-> ![Screenshot Placeholder: Create Grant Funding Dialog]
+> ![Screenshot Placeholder: Create Grant Funding Dialog](images/gf1.jpg)
 > *Screenshot: Modal with fields: Grant Name, Grant Code (alphanumeric), Grant Level dropdown, Grant Type dropdown, Fund Source dropdown, Description textarea.*
 
 1. Navigate to **Grant Setup → Grant Funding**
@@ -690,7 +690,7 @@ flowchart TD
 > ![Screenshot Placeholder: Grant Flows Tab]
 > *Screenshot: Timeline/workflow view showing stages: Application → Technical Check → Panel Evaluation → Approval. Each stage has a name, duration (in days), and order number.*
 
-**Purpose**: Define the workflow stages that applications pass through.
+**Purpose**: Define the workflow stages that applications pass through. [CURRENTLY NOT IMPLEMENTED TO FOLLOW THE WORKFLOW]
 
 1. Click **"Add Stage"**
 2. For each stage, configure:
@@ -703,7 +703,7 @@ flowchart TD
 
 #### Tab 2: Application Form (Dynamic Form Builder)
 
-> ![Screenshot Placeholder: Application Form Builder]
+> ![Screenshot Placeholder: Application Form Builder](images/app1.jpg)
 > *Screenshot: Form builder interface showing sections (A: General Information, B: Research Information, C: Team Members, etc.) with draggable fields. Each field has type (text, textarea, select, file), required toggle, and validation settings.*
 
 **Purpose**: Design the application form that PIs will fill out when applying for this grant.
@@ -721,7 +721,6 @@ flowchart TD
     E -->|Date| J[Configure: Label, Min/Max Date, Required]
     E -->|Checkbox| K[Configure: Label, Options, Required]
     F & G & H & I & J & K --> L[Save Form Schema]
-    L --> M[Preview Form]
 
     style A fill:#1C29A7,color:#fff
     style L fill:#28a745,color:#fff
@@ -735,13 +734,12 @@ flowchart TD
    - **Required** — Toggle ON/OFF
    - **Validation** — max length, email format, etc.
 4. Click **"Save Form"**
-5. Use **"Preview"** to see how the form will appear to applicants
 
 ---
 
 #### Tab 3: Evaluation Form (Scoring Rubric)
 
-> ![Screenshot Placeholder: Evaluation Form Builder]
+> ![Screenshot Placeholder: Evaluation Form Builder](images/ef.jpg)
 > *Screenshot: Evaluation form builder with weighted sections. Example: Section "Research Quality" (Weight: 30%) with criteria: Novelty (Max: 10), Methodology (Max: 15), Impact (Max: 10). Total section max = 35.*
 
 **Purpose**: Design the evaluation scoring rubric that panel members will use.
@@ -763,7 +761,7 @@ flowchart TD
 
 #### Tab 4: Approvers
 
-> ![Screenshot Placeholder: Approvers Tab]
+> ![Screenshot Placeholder: Approvers Tab](images/approver.jpg)
 > *Screenshot: Approval chain configuration showing Level 1 (HOD), Level 2 (Dean), Level 3 (DVC) with assigned approver names and RMC associations.*
 
 **Purpose**: Define the multi-level approval chain for this grant.
@@ -777,7 +775,7 @@ flowchart TD
 
 #### Tab 5: Email Schedules
 
-> ![Screenshot Placeholder: Email Schedules Tab]
+> ![Screenshot Placeholder: Email Schedules Tab](images/es.jpg)
 > *Screenshot: Email schedule configuration showing event triggers (Application Submitted, Revision Requested, Panel Assigned, etc.) with linked email templates and recipient groups.*
 
 **Purpose**: Configure which email notifications are sent at each workflow stage.
@@ -809,7 +807,7 @@ flowchart TD
 
 ### 6.6 Email Templates
 
-> ![Screenshot Placeholder: Email Templates Page]
+> ![Screenshot Placeholder: Email Templates Page](images/et.jpg)
 > *Screenshot: Email templates list showing 36+ templates with columns: Template Code (E1-E36), Template Name, Event Trigger, Status, Actions. "Create Template" button. Preview panel showing rendered email with UM branding.*
 
 **Purpose**: Manage the 36+ email notification templates used throughout the system.
@@ -832,7 +830,7 @@ flowchart TD
     style I fill:#28a745,color:#fff
 ```
 
-#### Available Template Variables
+#### Example Available Template Variables
 
 | Variable | Description | Example |
 |----------|-------------|---------|
@@ -849,7 +847,7 @@ flowchart TD
 
 ### 6.7 Allocation Votes
 
-> ![Screenshot Placeholder: Allocation Votes Page]
+> ![Screenshot Placeholder: Allocation Votes Page](images/av.jpg)
 > *Screenshot: Allocation votes list showing vote codes: Vote 11000 (Wages & Salaries), Vote 21000 (Travel & Transportation), Vote 27000 (Research Supplies), Vote 29000 (Professional Services), Vote 35000 (Equipment). Each with description and status.*
 
 **Purpose**: Configure budget vote categories used for grant financial tracking.
@@ -866,7 +864,7 @@ flowchart TD
 
 ### 6.8 Approver Registry
 
-> ![Screenshot Placeholder: Approver Registry Page]
+> ![Screenshot Placeholder: Approver Registry Page](images/ar.jpg)
 > *Screenshot: Approver registry showing registered approvers with columns: Name, Designation (HOD, Dean, DVC, VC), RMC, Level, Account Status (Active, Invited, No Account), Actions (Edit, Link Account, Remove).*
 
 **Purpose**: Register and manage approvers who will be available for grant approval chains.
