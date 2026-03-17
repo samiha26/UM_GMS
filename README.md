@@ -1,4 +1,4 @@
-<img width="949" height="466" alt="image" src="https://github.com/user-attachments/assets/85693779-196c-42fc-8119-b7a2f106807d" /># Universiti Malaya Grant Management System (UM-GMS)
+# Universiti Malaya Grant Management System (UM-GMS)
 # Comprehensive User Guide & System Manual
 
 **Version**: 1.0
@@ -354,7 +354,7 @@ flowchart LR
 
 **Purpose**: Create and manage Research Management Centres (organizational units such as Faculties and Research Centres).
 
-> ![Screenshot Placeholder: RMC Management Page]
+> ![Screenshot Placeholder: RMC Management Page](images/rmc.jpg)
 > *Screenshot: RMC list page showing a table with columns: Name, Description, Status (Active/Inactive badge), Users Count, Actions (Edit, Toggle, Delete). "Create RMC" button at top right. Search bar above table.*
 
 ```mermaid
@@ -384,7 +384,7 @@ flowchart TD
 
 #### How to Create an RMC
 
-> ![Screenshot Placeholder: Create RMC Dialog]
+> ![Screenshot Placeholder: Create RMC Dialog](images/rmc1.jpg)
 > *Screenshot: Modal dialog with title "Create New RMC", input fields for Name and Description (textarea), Cancel and Create buttons.*
 
 1. Navigate to **Pre-Award Setup → RMC Management**
@@ -413,7 +413,7 @@ flowchart TD
 
 **Purpose**: Define system roles that determine what users can do in the system.
 
-> ![Screenshot Placeholder: Roles Management Page]
+> ![Screenshot Placeholder: Roles Management Page](images/roles.jpg)
 > *Screenshot: Split-panel layout. Left panel: Roles list with Name, Status, User Count columns. Right panel: Permission Matrix showing grouped permissions with Create/Read/Update/Delete checkboxes per permission row. "Create Role" button at top.*
 
 ```mermaid
@@ -443,7 +443,7 @@ flowchart TD
 
 #### How to Assign Permissions to a Role
 
-> ![Screenshot Placeholder: Permission Matrix]
+> ![Screenshot Placeholder: Permission Matrix](images/roles1.jpg)
 > *Screenshot: Close-up of the permission matrix showing permission groups (Grant Setup, Application, Evaluation, etc.) with expandable rows. Each permission has 4 checkboxes: Create, Read, Update, Delete. Selected checkboxes shown in blue.*
 
 1. Click on a **Role** in the left panel
@@ -462,7 +462,7 @@ flowchart TD
 
 **Purpose**: Create and manage granular permissions that can be assigned to roles.
 
-> ![Screenshot Placeholder: Permissions Management Page]
+> ![Screenshot Placeholder: Permissions Management Page](images/permi.jpg)
 > *Screenshot: Permissions list with columns: Permission Name, Group, Description, Status. Filter dropdown for Group. "Create Permission" button.*
 
 #### How to Create a Permission
@@ -481,7 +481,7 @@ flowchart TD
 
 **Purpose**: Create and manage system user accounts with role and RMC assignments.
 
-> ![Screenshot Placeholder: Administrators Page]
+> ![Screenshot Placeholder: Administrators Page](images/administrator.jpg)
 > *Screenshot: User list table with columns: Name, Email, Staff No, RMC, Roles (badge list), Status (Active/Inactive), Actions (Edit, Toggle, Delete, Reset Password). Search bar and "Create User" button.*
 
 ```mermaid
@@ -509,7 +509,7 @@ flowchart TD
 
 #### How to Create a User
 
-> ![Screenshot Placeholder: Create User Dialog]
+> ![Screenshot Placeholder: Create User Dialog](images/administrator1.jpg)
 > *Screenshot: Modal dialog with fields: Name, Email, Staff Number, IC/Passport (encrypted), Phone (encrypted), Is UM User toggle, Password (if not UM user), RMC dropdown, Roles multi-select.*
 
 1. Navigate to **Pre-Award Setup → Administrators**
@@ -534,7 +534,7 @@ flowchart TD
 
 **Purpose**: Define the classification hierarchy for grants.
 
-> ![Screenshot Placeholder: Grant Levels Page]
+> ![Screenshot Placeholder: Grant Levels Page](images/gl.jpg)
 > *Screenshot: Grant levels list showing 4 levels — University, National, Private, International — with descriptions, status badges, and grant type counts.*
 
 The system supports **4 standard grant levels**:
@@ -552,7 +552,7 @@ The system supports **4 standard grant levels**:
 
 **Purpose**: Define grant types under each level (e.g., Government, Industry, Academic under National).
 
-> ![Screenshot Placeholder: Grant Types Page]
+> ![Screenshot Placeholder: Grant Types Page](images/gt.jpg)
 > *Screenshot: Grant types page with a tree view showing Level → Type hierarchy. Each type has Name, Description, Status, and Fund Source count.*
 
 ---
